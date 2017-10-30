@@ -14,7 +14,7 @@ class App extends React.Component {
             'Access-Control-Allow-Origin':'*'
             }
         })
-        .then( response => response.json() )
+        .then( (response) => { return response.json() } )
         .then( ({results: items}) => this.setState({items}) );
     }    
     filter(e) {
